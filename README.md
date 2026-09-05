@@ -15,6 +15,8 @@ SPDX-License-Identifier: AGPL-3.0-or-later OR LicenseRef-circuit-mesh-Commercial
 
 The core command, `circuit-mesh`, operates as a gatekeeper, ensuring that your system's network egress remains within a strictly defined perimeter of trusted nodes.
 
+[日本語版のREADMEはこちら (Japanese version available here)](./README_ja.md)
+
 ---
 
 ## Key Features

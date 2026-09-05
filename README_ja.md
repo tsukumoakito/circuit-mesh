@@ -15,6 +15,8 @@ SPDX-License-Identifier: AGPL-3.0-or-later OR LicenseRef-circuit-mesh-Commercial
 
 コアコマンドである `circuit-mesh` はゲートキーパーとして機能し、システムの出口通信を、信頼されたノードのみで構成される厳格に定義された境界内に限定します。
 
+[English README available here](./README.md)
+
 ---
 
 ## 主な機能
