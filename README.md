@@ -62,6 +62,9 @@ Arch Linux users can install `circuit-mesh` from the AUR (Arch User Repository).
 ```bash
 # Example using an AUR helper
 yay -S circuit-mesh
+
+# Using paru
+paru -S circuit-mesh
 ```
 
 ### Other Linux Distributions (from Source)
@@ -69,6 +72,10 @@ yay -S circuit-mesh
 For other distributions, you can build and install manually using the provided Makefile.
 
 ```bash
+# Clone the repository
+git clone https://codeberg.org/tsukumoakito/circuit-mesh.git
+cd circuit-mesh
+
 # 1. Build the binary
 make build
 
