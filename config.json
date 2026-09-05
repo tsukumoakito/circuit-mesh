@@ -1,0 +1,106 @@
+{
+    "ipset_name": "BOOTSTRAP",
+    "monitoring_interval_ms": 1000,
+    "mem_report_interval_s": 60,
+    "email_store_path": "/etc/circuit-mesh/passwords",
+    "cold_start_doh_enabled": true,
+    "doh_fallback_allowed": true,
+    "force_debug_mode": false,
+    "global_settings": {
+        "max_concurrent_rotations": 3,
+        "rotation_check_interval_s": 30
+    },
+    "rotation_profiles": [
+        { "name": "dns", "min_ttl": 900, "max_ttl": 1800 },
+        { "name": "proxy", "min_ttl": 3600, "max_ttl": 10800 },
+        { "name": "mail", "min_ttl": 14400, "max_ttl": 43200 }
+    ],
+    "tor_global": {
+        "socks_ip": "127.0.0.1",
+        "socks_port": 9050,
+        "control_ip": "127.0.0.1",
+        "control_port": 9051,
+        "cookie_path": "/var/lib/tor/control_auth_cookie",
+        "binary_path": "/usr/bin/tor",
+        "state_path": "/var/lib/tor/state",
+        "consensus_path": "/var/lib/tor/cached-microdesc-consensus"
+    },
+    "tor_instances": [
+        {
+            "id": 1,
+            "interface": "tor1",
+            "local_ip": "127.0.1.1",
+            "socks_port": 9050,
+            "http_port": 8118,
+            "fwmark": 101
+        },
+        {
+            "id": 2,
+            "interface": "tor2",
+            "local_ip": "127.0.1.2",
+            "socks_port": 9050,
+            "http_port": 8118,
+            "fwmark": 102
+        }
+    ],
+    "proxy_groups": [
+        {
+            "group_name": "<Optional VPN>",
+            "instances": [
+                {
+                    "id": 1,
+                    "interface": "<Optional VPN interface>",
+                    "local_ip": "127.0.2.1",
+                    "socks_port": 1080,
+                    "http_port": 8080,
+                    "fwmark": 201
+                }
+            ]
+        },
+        {
+            "group_name": "i2p",
+            "instances": [
+                {
+                    "id": 1,
+                    "interface": "i2p1",
+                    "local_ip": "127.0.3.1",
+                    "socks_port": 4447,
+                    "http_port": 4444,
+                    "fwmark": 301
+                }
+            ]
+        }
+    ],
+    "dns_tunnels": [
+        {
+            "name": "cloudflare",
+            "ip": "1.1.1.1",
+            "sni": "one.one.one.one",
+            "doh_path": "",
+            "local_ip": "127.0.9.1",
+            "local_port": 5300
+        },
+        {
+            "name": "quad9",
+            "ip": "149.112.112.112",
+            "sni": "dns.quad9.net",
+            "doh_path": "",
+            "local_ip": "127.0.9.2",
+            "local_port": 5300
+        }
+    ],
+    "email_providers": [
+        {
+            "name": "Gmail",
+            "local_ip": "127.0.10.3",
+            "domains": ["gmail.com"],
+            "imap_host": "imap.gmail.com",
+            "smtp_host": "smtp.gmail.com",
+            "imap_port": 993,
+            "smtp_port": 465,
+            "imap_start_port": 20000,
+            "smtp_start_port": 30000,
+            "default_route": "tor_isolated"
+        }
+    ]
+}

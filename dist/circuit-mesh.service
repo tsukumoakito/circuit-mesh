@@ -1,0 +1,17 @@
+[Unit]
+Description=Circuit Mesh Zero-Trust Network Engine
+After=network-online.target
+Wants=network-online.target
+Before=adguardhome.service dnsmasq.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/circuit-mesh
+Restart=on-failure
+RestartSec=5s
+MemoryMax=100M
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

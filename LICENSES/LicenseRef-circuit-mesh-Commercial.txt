@@ -1,0 +1,11 @@
+circuit-mesh Commercial License
+
+This license is a proprietary agreement between TSUKUMO Akito and the licensee.
+It provides exemptions from the GNU Affero General Public License (AGPL)
+requirements, including copyleft and source disclosure obligations.
+
+For the full terms and conditions of the circuit-mesh Commercial License,
+please contact the author:
+
+TSUKUMO Akito <tsukumoakito99@duck.com>
+https://codeberg.org/tsukumoakito/circuit-mesh

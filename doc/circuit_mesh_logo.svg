@@ -1,0 +1,25 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Pattern (Mesh/Grid) -->
+  <defs>
+    <pattern id="mesh" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#f7a41d" fill-opacity="0.2" />
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f7a41d" stroke-width="0.5" stroke-opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect x="50" y="50" width="1100" height="300" rx="30" fill="url(#mesh)" />
+
+  <!-- Outer Frame -->
+  <rect x="50" y="50" width="1100" height="300" rx="30" fill="none" stroke="#f7a41d" stroke-width="4" />
+
+  <!-- Text Block -->
+  <g font-family="'JetBrains Mono', monospace" font-weight="bold" text-anchor="middle">
+    <!-- Main Title: Circuit Mesh (Hollow 3D Outline) -->
+    <!-- Shadow Layer (Offset for 3D Effect) -->
+    <text x="606" y="211" font-size="140" fill="none" stroke="black" stroke-width="8">Circuit Mesh</text>
+    <!-- Main Outline (Zig Orange) -->
+    <text x="600" y="205" font-size="140" fill="none" stroke="#f7a41d" stroke-width="8">Circuit Mesh</text>
+
+    <!-- Subtitle (Solid White, Centered) -->
+    <text x="600" y="300" font-size="42" fill="#ffffff" letter-spacing="2">Zero-Trust Network Engine</text>
+  </g>
+</svg>
