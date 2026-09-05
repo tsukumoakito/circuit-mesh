@@ -3,7 +3,7 @@ SPDX-FileCopyrightText: 2026 TSUKUMO Akito <tsukumoakito99@duck.com>
 SPDX-License-Identifier: AGPL-3.0-or-later OR LicenseRef-circuit-mesh-Commercial
 -->
 
-# Circuit Mesh テクニカルマニュアル (v1.0.4 / 2026-09-06)
+# Circuit Mesh テクニカルマニュアル (v1.0.5 / 2026-09-06)
 
 `Circuit Mesh` は、ゼロトラスト・ネットワーク・ゲートキーパーです。本書では、その設定スキーマ、回転ロジック、および実装の詳細について詳細に解説します。
 

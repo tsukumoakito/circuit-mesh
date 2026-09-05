@@ -74,6 +74,9 @@ make build
 
 # 2. Install to system (/usr/bin, /etc, etc.)
 sudo make install
+
+# 3. Uninstall from system
+sudo make uninstall
 ```
 
 ---

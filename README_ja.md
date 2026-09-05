@@ -74,6 +74,9 @@ make build
 
 # 2. システムへのインストール (/usr/bin, /etc など)
 sudo make install
+
+# 3. システムからのアンインストール
+sudo make uninstall
 ```
 
 ---
