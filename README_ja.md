@@ -62,6 +62,9 @@ Arch Linux ユーザーは、AUR (Arch User Repository) から `circuit-mesh` �
 ```bash
 # AUR ヘルパー（yay など）を使用した例
 yay -S circuit-mesh
+
+# paru を使用する場合
+paru -S circuit-mesh
 ```
 
 ### その他の Linux ディストリビューション (ソースから)
@@ -69,6 +72,10 @@ yay -S circuit-mesh
 その他のディストリビューションでは、提供されている Makefile を使用して手動でビルドおよびインストールが可能です。
 
 ```bash
+# リポジトリをクローン
+git clone https://codeberg.org/tsukumoakito/circuit-mesh.git
+cd circuit-mesh
+
 # 1. バイナリのビルド
 make build
 
