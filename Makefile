@@ -48,13 +48,11 @@ install:
 
 	install -Dm644 zig-out/share/man/man1/circuit-mesh.1 "$(MANDIR)/man1/circuit-mesh.1"
 	install -Dm644 zig-out/share/man/ja/man1/circuit-mesh.1 "$(MANDIR)/ja/man1/circuit-mesh.1"
-
-	install -Dm644 doc/MANUAL.md "$(DOCDIR)/MANUAL.md"
-	install -Dm644 doc/MANUAL_ja.md "$(DOCDIR)/MANUAL_ja.md"
+	install -Dm644 zig-out/doc/MANUAL.md "$(DOCDIR)/MANUAL.md"
+	install -Dm644 zig-out/doc/MANUAL_ja.md "$(DOCDIR)/MANUAL_ja.md"
 	install -Dm644 doc/COMMERCIAL.md "$(DOCDIR)/COMMERCIAL.md"
 	install -Dm644 README.md "$(DOCDIR)/README.md"
 	install -Dm644 README_ja.md "$(DOCDIR)/README_ja.md"
-
 	install -Dm644 LICENSE "$(LICENSEDIR)/LICENSE"
 	install -Dm644 LICENSES/LicenseRef-circuit-mesh-Commercial.txt "$(LICENSEDIR)/LicenseRef-circuit-mesh-Commercial.txt"
 
