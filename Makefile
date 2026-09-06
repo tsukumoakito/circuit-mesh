@@ -19,16 +19,31 @@ HAS_SYSTEMD = $(shell [ -d /usr/lib/systemd/system ] && echo yes || echo no)
 all: build
 
 check-zig:
-	@ZIG_CURRENT=$$(zig version); \
+	@ZIG_CURRENT=$$(zig version 2>/dev/null || echo "none"); \
 	case $$ZIG_CURRENT in \
 		$(ZIG_VER)*) \
 			echo "✅ Zig version $$ZIG_CURRENT detected."; \
 			;; \
 		*) \
-			echo "❌ Error: Current circuit-mesh version requires Zig $(ZIG_VER)."; \
-			echo "   Currently using: $$ZIG_CURRENT."; \
-			echo "   Please run your zig package manager such as 'zvm use $(ZIG_VER)' before building."; \
-			exit 1; \
+			echo "⚠️  Zig version mismatch (Current: $$ZIG_CURRENT, Required: $(ZIG_VER))."; \
+			if command -v zvm >/dev/null 2>&1; then \
+				echo "🔄 zvm detected. Attempting to switch to $(ZIG_VER)..."; \
+				zvm use $(ZIG_VER) >/dev/null 2>&1 || true; \
+				ZIG_NEW=$$(zig version 2>/dev/null || echo "none"); \
+				case $$ZIG_NEW in \
+					$(ZIG_VER)*) \
+						echo "✅ Successfully switched to Zig $$ZIG_NEW."; \
+						;; \
+					*) \
+						echo "❌ Error: zvm failed to switch to Zig $(ZIG_VER)."; \
+						exit 1; \
+						;; \
+				esac; \
+			else \
+				echo "❌ Error: Current version requires Zig $(ZIG_VER)."; \
+				echo "   zvm not found. Please install Zig $(ZIG_VER) manually."; \
+				exit 1; \
+			fi; \
 			;; \
 	esac
 

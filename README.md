@@ -59,6 +59,10 @@ The core command, `circuit-mesh`, operates as a gatekeeper, ensuring that your s
 
 Arch Linux users can install `circuit-mesh` from the AUR (Arch User Repository). This is the recommended method as it handles dependencies and systemd integration automatically according to Arch standards.
 
+| Package | Version | Description | Votes | Links |
+| :--- | :--- | :--- | :--- | :--- |
+| **circuit-mesh** | ![AUR version](https://img.shields.io/aur/version/circuit-mesh) | Zero-Trust Network Engine | ![AUR votes](https://img.shields.io/aur/votes/circuit-mesh) | [![AUR](https://img.shields.io/badge/AUR-Package-orange)](https://aur.archlinux.org/packages/circuit-mesh) [![License](https://img.shields.io/aur/license/circuit-mesh)](./LICENSE) |
+
 ```bash
 # Example using an AUR helper
 yay -S circuit-mesh
