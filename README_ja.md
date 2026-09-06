@@ -133,7 +133,7 @@ sudo circuit-mesh --config /path/to/config.json
 以下のデュアルライセンスの下で提供されています：
 
 - **GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later)**
-- **コマーシャル・ライセンス** (詳細は `doc/COMMERCIAL.md` を参照)
+- **コマーシャル・ライセンス** (詳細は [COMMERCIAL](./doc/COMMERCIAL.md) を参照)
 
 ---
 **開発者ノート**: 本プロジェクトは現在実験的なベータ版です。高い可用性が求められる本番環境での使用には注意してください。

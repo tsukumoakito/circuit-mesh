@@ -3,7 +3,7 @@ SPDX-FileCopyrightText: 2026 TSUKUMO Akito <tsukumoakito99@duck.com>
 SPDX-License-Identifier: AGPL-3.0-or-later OR LicenseRef-circuit-mesh-Commercial
 -->
 
-# Circuit Mesh Technical Manual (v1.0.8 / 2026-09-06)
+# Circuit Mesh Technical Manual (v1.0.9 / 2026-09-06)
 
 `Circuit Mesh` is a Zero-Trust network gatekeeper. This document provides a granular explanation of its configuration schema, rotation logic, and implementation details.
 
