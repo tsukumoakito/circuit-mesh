@@ -59,6 +59,10 @@ SPDX-License-Identifier: AGPL-3.0-or-later OR LicenseRef-circuit-mesh-Commercial
 
 Arch Linux ユーザーは、AUR (Arch User Repository) から `circuit-mesh` をインストールできます。これは、依存関係や systemd ユニットの統合が Arch の標準に従って自動的に処理されるため、推奨される方法です。
 
+| パッケージ | バージョン | 説明 | 投票数 | リンク |
+| :--- | :--- | :--- | :--- | :--- |
+| **circuit-mesh** | ![AUR version](https://img.shields.io/aur/version/circuit-mesh) | ゼロトラスト・ネットワークエンジン | ![AUR votes](https://img.shields.io/aur/votes/circuit-mesh) | [![AUR](https://img.shields.io/badge/AUR-パッケージ-orange)](https://aur.archlinux.org/packages/circuit-mesh) [![ライセンス](https://img.shields.io/aur/license/circuit-mesh)](./LICENSE) |
+
 ```bash
 # AUR ヘルパー（yay など）を使用した例
 yay -S circuit-mesh

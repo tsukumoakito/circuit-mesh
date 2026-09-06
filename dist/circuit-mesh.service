@@ -1,6 +1,5 @@
 [Unit]
 Description=Circuit Mesh Zero-Trust Network Engine
-After=network-online.target
 Wants=network-online.target
 Before=adguardhome.service dnsmasq.service
 

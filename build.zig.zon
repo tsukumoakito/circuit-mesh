@@ -1,7 +1,7 @@
 .{
     .name = .circuit_mesh,
-    .version = "1.0.7",
-    .release_date_unix = "1788657538",
+    .version = "1.0.8",
+    .release_date_unix = "1788661721",
     .fingerprint = 0x88975cab2a13dba3,
     .minimum_zig_version = "0.15.2",
     .dependencies = .{},
