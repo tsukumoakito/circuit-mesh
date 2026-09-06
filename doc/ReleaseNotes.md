@@ -3,16 +3,16 @@ SPDX-FileCopyrightText: 2026 TSUKUMO Akito <tsukumoakito99@duck.com>
 SPDX-License-Identifier: AGPL-3.0-or-later OR LicenseRef-circuit-mesh-Commercial
 -->
 
-# v1.0.8: Netlink Barrier & Hybrid Tunnel Stability
+# v1.0.9: Netlink Barrier & Hybrid Tunnel Stability
 
-We are pleased to announce the release of **circuit-mesh v1.0.8**.
+We are pleased to announce the release of **circuit-mesh v1.0.9**.
 This version marks the stabilization of our core Netlink engine and the integration of a multi-layer DNS tunneling strategy designed for hardened network environments.
 
-> **Note:** This release (v1.0.8) focuses on the "Ground Truth" of network egress. It ensures that system network access is physically restricted to trusted entry points through direct kernel manipulation.
+> **Note:** This release (v1.0.9) focuses on the "Ground Truth" of network egress. It ensures that system network access is physically restricted to trusted entry points through direct kernel manipulation.
 
 ## 🚀 Strategic Milestone: Zero-Trust Enforcement
 
-`circuit-mesh` is no longer just a proxy wrapper; it has evolved into a dedicated network gatekeeper. By manipulating the Linux kernel's `IPSet` via raw Netlink sockets, v1.0.8 effectively locks down the system egress, permitting only verified Tor Directory Authorities and Guard nodes.
+`circuit-mesh` is no longer just a proxy wrapper; it has evolved into a dedicated network gatekeeper. By manipulating the Linux kernel's `IPSet` via raw Netlink sockets, v1.0.9 effectively locks down the system egress, permitting only verified Tor Directory Authorities and Guard nodes.
 
 ## ✨ Key Features of circuit-mesh
 
@@ -47,11 +47,11 @@ Unlike our companion project `zind`, `circuit-mesh` remains under a **dual-licen
 
 ---
 
-**circuit-mesh v1.0.8 リリースのお知らせ**
+**circuit-mesh v1.0.9 リリースのお知らせ**
 
 本バージョンは、コアとなる Netlink エンジンの安定化と、要塞化されたネットワーク環境向けに設計された多層 DNS トンネリング戦略の統合を実現した重要なリリースです。
 
-> **補足:** v1.0.8 は、ネットワーク出口通信の「唯一の真実（Ground Truth）」に焦点を当てています。カーネルへの直接操作を通じて、システムのアクセスを信頼されたエントリポイントのみに物理的に制限します。
+> **補足:** v1.0.9 は、ネットワーク出口通信の「唯一の真実（Ground Truth）」に焦点を当てています。カーネルへの直接操作を通じて、システムのアクセスを信頼されたエントリポイントのみに物理的に制限します。
 
 ## 🚀 戦略的マイルストーン：ゼロトラストの強制
 
