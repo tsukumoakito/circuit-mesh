@@ -1,4 +1,4 @@
-circuit-mesh(1) "1.0.11" "circuit-mesh User Manual"
+circuit-mesh(1) "1.0.12" "circuit-mesh User Manual"
 
 # NAME
 
