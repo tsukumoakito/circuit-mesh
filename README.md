@@ -9,13 +9,16 @@ SPDX-License-Identifier: AGPL-3.0-or-later OR LicenseRef-circuit-mesh-Commercial
 
 # Circuit Mesh (Zero-Trust Network Engine)
 
+[日本語版のREADMEはこちら (Japanese version available here)](./README_ja.md)
+
+[![Zig Version](https://img.shields.io/badge/Zig-0.15.2-orange.svg)](https://ziglang.org)
+[![License: MIT](https://img.shields.io/badge/License-AGPL--3.0-red.svg)](LICENSE)
+
 **A Zero-Trust Network Engine for Secure DNS Egress and Identity Rotation.**
 
 `Circuit Mesh` is a high-performance network barrier and proxy manager written in Zig. It leverages Linux Netlink (IPSet) to dynamically control network access, forcing traffic through isolated Tor circuits with automated identity rotation and DoH/DoT fallback mechanisms.
 
 The core command, `circuit-mesh`, operates as a gatekeeper, ensuring that your system's network egress remains within a strictly defined perimeter of trusted nodes.
-
-[日本語版のREADMEはこちら (Japanese version available here)](./README_ja.md)
 
 ---
 
@@ -122,9 +125,11 @@ sudo circuit-mesh --config /path/to/config.json
 
 ## Documentation
 
-- **MANUAL.md**: Detailed JSON configuration schema and rotation logic.
-- **man circuit-mesh(1)**: Standard Unix manual page (English/Japanese).
-- **COMMERCIAL.md**: Licensing terms for corporate integration.
+- **Man Pages**: Unix/Linux/macOS users can refer to `man circuit-mesh` for terminal-native documentation.
+- **Local Manual (Build Output)**: After running `zig build`, copies of the manual are available in `zig-out/doc/`. This is recommended for environments without `man` (e.g., native Windows).
+- **Full Manual (Repository Source)**: For web-friendly reading or deep dive:
+  - [User Manual (English)](./doc/MANUAL.md)
+  - [User Manual (Japanese)](./doc/MANUAL_ja.md)
 
 ---
 

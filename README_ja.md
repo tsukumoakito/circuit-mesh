@@ -9,13 +9,16 @@ SPDX-License-Identifier: AGPL-3.0-or-later OR LicenseRef-circuit-mesh-Commercial
 
 # Circuit Mesh (ゼロトラスト・ネットワークエンジン)
 
+[English version available here (英語版のREADMEはこちら)](./README.md)
+
+[![Zig Version](https://img.shields.io/badge/Zig-0.15.2-orange.svg)](https://ziglang.org)
+[![License: MIT](https://img.shields.io/badge/License-AGPL--3.0-red.svg)](LICENSE)
+
 **安全なDNS出口通信とアイデンティティ回転を実現するゼロトラスト・ネットワークエンジン。**
 
 `Circuit Mesh` は、Zig で記述された高性能なネットワーク・バリア兼プロキシマネージャです。Linux Netlink (IPSet) を活用してネットワークアクセスを動的に制御し、自動化されたアイデンティティ回転および DoH/DoT フォールバック機構を備えた、隔離された Tor 回路に DNS 通信を強制します。
 
 コアコマンドである `circuit-mesh` はゲートキーパーとして機能し、システムの出口通信を、信頼されたノードのみで構成される厳格に定義された境界内に限定します。
-
-[English README available here](./README.md)
 
 ---
 
@@ -122,9 +125,11 @@ sudo circuit-mesh --config /path/to/config.json
 
 ## ドキュメント
 
-- **MANUAL_ja.md**: 詳細な JSON 設定スキーマと回転ロジックの解説。
-- **man circuit-mesh(1)**: 標準 Unix マニュアルページ（英語/日本語）。
-- **COMMERCIAL.md**: 法人向け統合のためのライセンス条項。
+- **man ページ**: Unix/Linux/macOS ユーザーは、ターミナルで `man circuit-mesh` を実行することでローカルドキュメントを参照できます。
+- **ビルド済み環境での場所**: ビルドを実行すると、`zig-out/doc/` にも同じ内容の説明書がコピーされます。`man` が使えない環境（Windows等）ではこちらを直接参照してください。
+- **詳細マニュアル (リポジトリ版)**: ブラウザで閲覧したい場合や、ソースとして確認したい場合は以下を参照してください：
+  - [取扱説明書 (日本語版)](./doc/MANUAL_ja.md)
+  - [取扱説明書 (英語版)](./doc/MANUAL.md)
 
 ---
 
