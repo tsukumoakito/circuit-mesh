@@ -36,6 +36,56 @@ The core command, `circuit-mesh`, operates as a gatekeeper, ensuring that your s
 
 ---
 
+## 🛡️ Is Clearing Your Browser History Enough? The Overlooked Blind Spot of "DNS"
+
+When surfing the web, many people take precautions such as using "Incognito mode" (private browsing) or regularly clearing their browser history. Of course, these are vital steps to ensure no traces are left directly on your device.
+
+However, **no matter how cleanly you erase your browser history, it means nothing if your communication's "destination" is completely exposed to the outside world.** The key vulnerability here is **"DNS"**.
+
+### What is "DNS" Anyway?
+
+DNS (Domain Name System) is, so to speak, the **"giant phonebook of the internet"**.
+When we type `example.com` into our browsers, our computers or smartphones cannot connect to that site directly. They need to query an internet phonebook, asking, *"Where is the actual IP address for this domain (e.g., 93.184.216.34)?"* This querying mechanism is what we call DNS.
+
+### By Default, All Your Activity is Fully Exposed to Your ISP
+
+On a default, out-of-the-box configuration of a PC or smartphone, queries to this phonebook (DNS queries) are sent **in plain text ("like an open postcard") to the servers of your contracted Internet Service Provider (ISP, mobile carrier, fiber-optic provider, etc.)**.
+
+This means:
+
+- What medical symptoms you searched for in the middle of the night.
+- Which news sites or social media platforms you visit and how often.
+- What services you attempted to log into.
+
+Every single one of these "destinations at the exact moment of access" (domain names) is **recorded (logged) in real-time by your ISP and any intermediary Wi-Fi administrators.** No matter how thoroughly you clear your browser history, your complete activity record remains sitting on your provider's servers.
+
+---
+
+## ⚙️ How Does Circuit Mesh Specifically Prevent DNS Leaks?
+
+That is why, alongside browser-level precautions, you need a system that **completely hides DNS queries themselves and prevents anyone from tracking them.**
+
+However, an important reality to note is that **simply installing `Circuit Mesh` on your computer will not magically alter your system settings overnight.**
+To truly protect your DNS privacy, you need a well-constructed "routing pipeline" across your entire system. Specifically, true privacy only functions when you build and integrate your environment as follows:
+
+1. **Deploying a Local Forwarder (e.g., AdGuard Home or Pi-hole)**
+   - Run a local DNS filter such as `AdGuard Home` or `Pi-hole` on your host to intercept all DNS requests originating from your devices.
+2. **Forcibly Blocking Port 53 (Plaintext DNS)**
+   - Use your computer/router settings or the `Circuit Mesh` Netlink barrier to completely ban and block unencrypted standard DNS traffic (port 53). This prevents accidental plaintext leaks to the outside world.
+3. **Proper Routing of VPN and OS DNS Settings**
+   - Even when using a commercial VPN (such as NordVPN), instead of blindly relying on the VPN provider's proprietary DNS servers, all queries must be placed under local management.
+4. **Backend Processing via "Tor + Load-Balancing" by Circuit Mesh**
+   - `Circuit Mesh` takes over the correctly routed, locally aggregated DNS queries.
+   - `Circuit Mesh` **randomly distributes (load-balances) these queries across 10 upstream DNS providers**, sending each one outward via **completely independent, isolated Tor circuits** using DoT (DNS over TLS).
+
+### Conclusion
+
+Protecting your browser history while preventing DNS leaks through Circuit Mesh and proper local configuration—only when these two elements come together is a true privacy defense grid completed for the modern internet.
+
+`Circuit Mesh` serves as the engine that executes the most complex and heavy part of this defense grid—**"the Tor-driven encryption, distribution, and fail-safe backend"**—with extreme robustness powered by Zig.
+
+---
+
 ## System Architecture
 
 1. **Discovery Phase**: Scans Tor binary and consensus files to populate the initial "Safe IP" list.
@@ -117,6 +167,7 @@ sudo circuit-mesh --config /path/to/config.json
 | **Tor Discovery** | ✅ Stable | Extraction from Binary/State/Consensus. |
 | **DNS Tunnels** | ✅ Stable | DoT (Native) and DoH (OpenSSL/H2). |
 | **Identity Rotation** | ✅ Stable | Credential rotation and Circuit Purging. |
+| **Native DNS Load Balancer** | 🛠️ Planned | Optional multi-upstream load-balancing without external forwarders. |
 | **Zig 0.16.0** | 🛠️ Planned | Migration to the latest compiler. |
 | **Email Proxy** | 🛠️ Planned | IMAP/SMTP isolated proxying. |
 | **Generic Proxies** | 🛠️ Planned | Support for I2P/VPN group chains. |
