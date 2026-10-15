@@ -3,7 +3,8 @@ version = 1
 [[annotations]]
 path = [
     "*",
-    ".gitignore",    "doc/**",
+    ".gitignore",
+    "doc/**",
     "src/**",
     ".editorconfig",
     ".zigversion",
