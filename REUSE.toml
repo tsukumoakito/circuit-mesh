@@ -6,6 +6,7 @@ path = [
     ".gitignore",
     "doc/**",
     "src/**",
+    "dist/**",
     ".editorconfig",
     ".zigversion",
     ".envrc",
